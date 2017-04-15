@@ -1,5 +1,6 @@
 +++
 title = "Subscription confirmed"
+private = true
 
 +++
 

@@ -1,5 +1,6 @@
 +++
 title = "Confirm your email"
+private= true
 
 +++
 
