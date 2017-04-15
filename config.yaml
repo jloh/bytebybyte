@@ -1,8 +1,9 @@
 ---
 languageCode: "en-AU"
 title: "This Week in Technology"
-baseURL: "https://www.thisweekin.technology"
+baseURL: "https://www.thisweekin.technology/"
 theme: "cocoa-eh"
+enableRobotsTXT: true
 
 permalinks:
   issue: "issue/:slug/"

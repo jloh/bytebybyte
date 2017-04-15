@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: {{ .Site.BaseURL }}sitemap.xml
+{{ range .Data.Pages }}{{ if eq .Type "subscribe" }}Disallow: {{.RelPermalink}}
+{{end}}{{end}}
