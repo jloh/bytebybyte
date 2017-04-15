@@ -1,0 +1,36 @@
+@media (min-width: 600px) {
+  section.footer {
+    background-color: transparent;
+  }
+  section.footer .container {
+    flex-direction: row;
+  }
+  section.footer .container .copyright {
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #666666;
+    font-size: 100%;
+  }
+  section.footer .container .copyright a {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+section.footer .container .copyright a {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+section.footer .container a:hover {
+  color: #333333;
+}
+section.footer .container a {
+  color: #666666;
+}
+@media (max-width: 600px) {
+  section.footer .container .copyright {
+    color: #666666;
+    font-size: 80%;
+    padding-bottom: 5px;
+  }
+}

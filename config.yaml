@@ -1,0 +1,27 @@
+---
+languageCode: "en-AU"
+title: "This Week in Technology"
+baseURL: "https://www.thisweekin.technology"
+theme: "cocoa-eh"
+
+permalinks:
+  issue: "issue/:slug/"
+
+params:
+  github: 'jloh/thisweekintechnology'
+  twitter: "itsjloh"
+  dateform: "Jan 2, 2006"
+  dateformfull: "Mon Jan 2 2006 15:04:05 MST"
+  latestpostcount: 5
+  description: "Weekly newsletters about anything technology"
+  copyright: 'made with <i class="fa fa-heart" aria-hidden="true"></i> by [jloh](https://jloh.co) and powered by [sendy](https://sendy.co) and [Netlify](https://www.netlify.com/)'
+  #logofile: "img/logo.png"
+  #faviconfile: "img/logo.png"
+  highlightjs: false
+  progressively: false
+  latestpostcount: 5
+  email: "contact@thisweekin.technology"
+  #social_banner = "img/banner.png"
+  posts_navigation: true
+  extracssfiles:
+   - '/css/custom.css'

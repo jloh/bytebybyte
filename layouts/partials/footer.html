@@ -1,0 +1,49 @@
+<section class="footer">
+    <div class="container">
+        <div class="copyright">
+
+        {{ if .Site.Params.copyright }}
+            {{ .Site.Params.copyright | markdownify}}
+        {{ end }}
+
+        </div>
+        <div class="icons">
+
+        {{ if .Site.Params.github }}
+            <a href="https://github.com/{{ .Site.Params.github }}" target="_blank">
+                <i class="fa fa-github icon" aria-hidden="false" alt="GitHub"></i>
+            </a>
+        {{ end }}
+
+        {{ if .Site.Params.twitter }}
+            <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank">
+                <i class="fa fa-twitter icon" aria-hidden="false" alt="Twitter"></i>
+            </a>
+        {{ end }}
+
+        {{ if .Site.Params.linkedin }}
+            <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank">
+                <img class="icon" src="/img/linkedin.svg" alt="linkedin" />
+            </a>
+        {{ end }}
+
+        {{ if .Site.Params.email }}
+            <a href="mailto:{{ .Site.Params.email }}">
+                <i class="fa fa-envelope icon" aria-hidden="false" alt="Email"></i>
+            </a>
+        {{ end }}
+
+        {{ if .Site.RSSLink }}
+            <a href="{{ .Site.RSSLink }}">
+                <i class="fa fa-rss icon" aria-hidden="false" alt="RSS"></i>
+            </a>
+        {{ end }}
+
+        </div>
+    </div>
+</section>
+
+{{ partial "footer_scripts" . }}
+
+</body>
+</html>
