@@ -46,14 +46,11 @@
                 </div>
             {{ end }}
             <br>
-            <div class="disqus">
-                {{ template "_internal/disqus.html" . }}
-            </div>
             <div id='discourse-comments'></div>
 
             <script type="text/javascript">
               DiscourseEmbed = { discourseUrl: 'https://meta.jloh.co/',
-                                 discourseEmbedUrl: 'https://www.thisweekin.technology/issues/1/' };
+                                 discourseEmbedUrl: {{ .Permalink }} };
 
               (function() {
                 var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
