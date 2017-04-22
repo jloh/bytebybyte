@@ -34,3 +34,7 @@ section.footer .container a {
     padding-bottom: 5px;
   }
 }
+
+.issue h3:before {
+  content: '# '
+}
