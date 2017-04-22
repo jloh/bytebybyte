@@ -21,6 +21,12 @@
             </a>
         {{ end }}
 
+        {{ if .Site.Params.medium }}
+            <a href="https://medium.com/{{ .Site.Params.medium }}" target="_blank">
+                <i class="fa fa-medium icon" aria-hidden="false" alt="Medium"></i>
+            </a>
+        {{ end }}
+
         {{ if .Site.Params.linkedin }}
             <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank">
                 <img class="icon" src="/img/linkedin.svg" alt="linkedin" />
