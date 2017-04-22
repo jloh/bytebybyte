@@ -8,15 +8,14 @@ title = "Home"
   <h2>Sign up</h2>
   <em>No spam, we promise. Just a weekly newsletter with 5 articles.</em>
 
-  <form class="ui form" method="post" action="https://sendy.jloh.pub/subscribe" accept-charset="utf-8">
-    <input type="hidden" name="list" value="t04lEpaM2KWgvknz5xnWhg">
-    <div class="inline field" style="width: 100%">
-      <div class="ui huge input">
-        <input type="email" name="email" id="email" data-validate="email" placeholder="E-mail" style="width: 65%">
-        <button type="submit" value="Subscribe" class="ui submit button">
-          Sign-up
-        </button>
+  <div class="gh-subscribe">
+    <form method="POST" action="https://sendy.jloh.pub/subscribe" accept-charset="utf-8">
+      <div class="form-group">
+        <input class="subscribe-email" type="email" name="email" id="email" data-validate="email" placeholder="Your email address" />
       </div>
-    </div>
-  </form>
+      <br>
+      <button class="" type="submit">Subscribe</button>
+      <input type="hidden" name="list" value="t04lEpaM2KWgvknz5xnWhg">
+    </form>
+  </div>
 </center>
