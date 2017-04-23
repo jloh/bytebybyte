@@ -8,28 +8,24 @@
                     {{ partial "page-heading" . }}
                 </div>
                 <div class="meta">
-                    {{ if ne .Date .Lastmod }}
-                        <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">
-                            {{ if .GitInfo }}
-                                Published <a href="https://github.com/{{ .Site.Params.github }}/commits/{{ .Hash }}" title="{{ .Subject }}">{{ .Date.Format .Site.Params.dateform }}</a>
-                            {{ else }}
-                                Published {{ .Date.Format .Site.Params.dateform }}
-                            {{ end }}
-                        </div>
-                        {{ with .GitInfo }}
-                        <div class="date" title="{{ .Lastmod.Format .Site.Params.dateformfull }}">
-                                | Updated <a href="https://github.com/{{ .Site.Params.github }}/commits/{{ .Hash }}" title="{{ .Date.Format .Site.Params.dateformfull }}">
-                                    {{ .Lastmod.Format .Site.Params.dateform }}
-                                </a>
+		    {{ if .GitInfo }}
+                        {{ if ne .Date .Lastmod }}
+                            <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}" style="margin-right: 5px">
+                                    Published {{ .Date.Format .Site.Params.dateform }}
+                            </div>
+                            <div class="date" title="{{ .Lastmod.Format .Site.Params.dateformfull }}">
+                                    | Updated <a href="https://github.com/{{ .Site.Params.github }}/commit/{{ .GitInfo.Hash }}" title="{{ .GitInfo.Subject }}">
+                                        {{ .Lastmod.Format .Site.Params.dateform }}
+                                    </a>
+                            </div>
+                        {{ else }}
+                            <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">
+                                Published <a href="https://github.com/{{ .Site.Params.github }}/commit/{{ .Hash }}" title="{{ .Subject }}">{{ .Date.Format .Site.Params.dateform }}</a>
+                            </div>
                         {{ end }}
-                        </div>
                     {{ else }}
                         <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">
-                        {{ if .GitInfo }}
-                            Published <a href="https://github.com/{{ .Site.Params.github }}/commits/{{ .Hash }}" title="{{ .Subject }}">{{ .Date.Format .Site.Params.dateform }}</a>
-                        {{ else }}
                             Published {{ .Date.Format .Site.Params.dateform }}
-                        {{ end }}
                         </div>
                     {{ end }}
                     {{ if not .Params.noauthor }}
