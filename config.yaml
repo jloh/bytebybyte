@@ -4,6 +4,7 @@ title: "This Week in Technology"
 baseURL: "https://www.thisweekin.technology/"
 theme: "cocoa-eh"
 enableRobotsTXT: true
+enableGitInfo: true
 
 permalinks:
   issue: "issue/:slug/"
