@@ -20,7 +20,7 @@ params:
   dateformfull: "Monday January 2nd 2006 15:04:05 MST"
   dateformlist: "January 02"
   latestpostcount: 5
-  description: "Weekly newsletters about anything technology"
+  description: "A weekly newsletter about anything technology"
   copyright: 'made with <i class="fa fa-heart" aria-hidden="true"></i> by [jloh](https://jloh.co) and powered by [sendy](http://sendy.co/?ref=XR4yq) and [Netlify](https://www.netlify.com/)'
   logofile: "img/logo.png"
   highlightjs: false
