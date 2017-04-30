@@ -1,0 +1,89 @@
+.brand-header {
+  padding-top: 1rem;
+}
+
+.tagline {
+  font-size: @font-size-lg;
+}
+
+.post-list {
+  list-style: none;
+  .groupby {
+    font-size: @font-size-lg;
+    text-transform: uppercase;
+  }
+  .post-item {
+    padding-left: 1.5rem;
+    font-family: monospace, monospace;
+  }
+  .meta {
+    color: lighten(@body-font-color, 15%);
+    padding-right: .5rem;
+  }
+}
+
+.bg-grey {
+  background-color: @gray-color-light;
+  color: @footer-text-color;
+  padding: 1rem;
+  a {
+    color: darken(@footer-text-color, 10%);
+    text-decoration: none;
+    font-weight: 500;
+    &:hover {
+      color: darken(@footer-text-color, 20%);
+    }
+  }
+}
+
+.footer-content {
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-links {
+  a {
+    padding: .1rem;
+    transition: color 0.3s ease;
+  }
+  .github:hover {
+    color: @social-github;
+  }
+  .medium:hover {
+    color: @social-medium;
+  }
+  .rss:hover {
+    color: @social-rss;
+  }
+  .twitter:hover {
+    color: @social-twitter;
+  }
+}
+
+.issue h3 {
+  &:before {
+    content: '# ';
+    color: lighten(@body-font-color, 20%);
+  }
+  & a {
+    text-decoration: none;
+  }
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.main {
+  font-size: @font-size-lg;
+  color: darken(@body-font-color, 50%);
+  letter-spacing: 0.01rem;
+  line-height: 1.75rem;
+}
+
+::-moz-selection {
+  background: @background-selection-color;
+}
+
+::selection {
+  background: @background-selection-color;
+}

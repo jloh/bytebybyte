@@ -1,0 +1,16 @@
+      <section class="navbar-section">
+	      <a href="{{ .Site.BaseURL}}" class="navbar-brand mr-10 hide-sm">{{ .Site.Title }}</a>
+	{{ if .Site.Params.short_title }}<a href="{{ .Site.BaseURL }}" class="navbar-brand mr-10 show-sm hide-xs">{{ .Site.Params.short_title }}</a>{{ end }}
+      </section>
+{{- if .Site.Params.nav_logo }}
+      <section class="navbar-center">
+        <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}" style="height: 40px">
+          <img src="{{ .Site.BaseURL }}{{ .Site.Params.nav_logo }}" style="height: 40px"></img>
+        </a>
+      </section>
+{{- end }}
+      <section class="navbar-section">
+{{- range .Site.Params.navigation }}
+        <a href="{{ .url }}" class="btn btn-link">{{ .title }}</a>
+{{- end }}
+      </section>

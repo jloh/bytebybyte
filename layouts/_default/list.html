@@ -1,0 +1,47 @@
+{{ partial "head.html" . }}
+  <body>
+    <header class="navbar container grid-960 brand-header">
+{{ partial "navigation.html" . }}
+    </header>
+    <div class="divider"></div>
+    <section class="container grid-960 text-center section">
+      <h2>{{ .Title }}</h2>
+    </section>
+    <div class="divider"></div>
+    <section class="container grid-960 coumns section main">
+      <div class="issue colum col-10 col-sm-12 pt-5 mt-10 centered">
+        <ul class="post-list">
+{{- range (first .Site.Params.latestpostcount (where .Pages "Section" "issues")).GroupByDate "January 2006" "desc" }}
+          <li class="groupby">{{ .Key }}</li>
+{{- range .Pages.ByPublishDate }}
+{{ partial "list.html" . }}
+{{- end }}
+{{- end }}
+      </ul>
+                <br>
+
+<ul class="pagination">
+{{- if .PrevInSection }}
+  <li class="page-item page-prev">
+    <a href="{{ .PrevInSection.Permalink }}">
+      <p class="page-item-subtitle">Previous</p>
+      <h3 class="page-item-title">{{ .PrevInSection.Title }}</h3>
+    </a>
+  </li>
+{{- end }}
+{{- if .NextInSection }}
+  <li class="page-item page-next">
+    <a href="{{ .NextInSection.Permalink }}">
+      <p class="page-item-subtitle">Next</p>
+      <h3 class="page-item-title">{{ .NextInSection.Title }}</h3>
+    </a>
+  </li>
+{{- end }}
+</ul>
+
+      </div>
+    </section>
+{{ partial "footer.html" . }}
+
+  </body>
+</html>

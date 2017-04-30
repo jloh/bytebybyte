@@ -1,48 +1,38 @@
-{{ partial "header.html" . }}
-<section class="main">
-    <div class="container">
-        <div class="content">
-            {{ range where .Data.Pages "Title" "Home" }}
-                <div class="markdown">
-                {{ .Content }}
-                </div>
-            {{ end }}
+{{ partial "head.html" . }}
+  <body>
+    <header class="navbar container grid-960 brand-header">
+{{ partial "navigation.html" . }}
+    </header>
+    <div class="divider"></div>
+    <section id="signup" class="container grid-960 text-center section">
+      <h1>This Week in Technology</h1>
+      <p class="text-uppercase tagline pb-5">A weekly newsletter on everything tech</p>
 
-            {{ if isset .Site.Params "latestpostcount" }}
-                <div class="posts">
-                {{ $nbPosts := len (where .Data.Pages "Section" "issues") }}
-                {{ if gt $nbPosts 0 }}
-                    <div class="page-heading">Latest issues</div>
-                    <ul>
-                    {{ range (first .Site.Params.latestpostcount (where .Pages "Section" "issues")).GroupByDate "Jan, 2006" "desc" }}
-                        <li class="groupby">{{ .Key }}</li>
-                        {{ range .Pages.ByPublishDate }}
-                            {{ partial "li.html" . }}
-                        {{ end }}
-                    {{ end }}
-                    </ul>
-
-                    {{ if gt $nbPosts .Site.Params.latestpostcount }}
-                        <a href="./issues/" class="see-more">See more ...</a>
-                    {{ end }}
-                {{ end }}
-                </div>
-            {{ end }}
-
-            <div class="best-posts">
-            {{ $nbPosts := len (where .Data.Pages "Params.best" true) }}
-            {{ if gt $nbPosts 0 }}
-                <div class="page-heading">Best issues</div>
-                <ul>
-                {{ range .Data.Pages.ByPublishDate }}
-                    {{ if eq .Params.best true }}
-                        {{ partial "li.html" . }}
-                    {{ end }}
-                {{ end }}
-                </ul>
-            {{ end }}
-            </div>
+      <form method="POST" action="https://sendy.jloh.pub/subscribe" accept-charset="utf-8">
+        <div class="column col-10 centered">
+          <div class="input-group">
+            <input class="form-input input-lg" type="email" name="email" id="email" data-validate="email" placeholder="Your email address" />
+            <button class="input-group-btn btn-lg btn btn-primary" type="submit"><i class="fa fa-envelope-o"></i> Subscribe</button>
+          </div>
         </div>
-    </div>
-</section>
+        <input type="hidden" name="list" value="t04lEpaM2KWgvknz5xnWhg">
+      </form>
+    </section>
+    <section class="container grid-960 section">
+      <h2 class="text-center pt-10">Past Issues</h2>
+      <div>
+        <ul class="post-list">
+{{- range (first .Site.Params.latestpostcount (where .Pages "Section" "issues")).GroupByDate "January 2006" "desc" }}
+          <li class="groupby">{{ .Key }}</li>
+{{- range .Pages.ByPublishDate }}
+{{ partial "list.html" . }}
+{{- end }}
+{{- end }}
+        </ul>
+      <div>
+    </section>
+
 {{ partial "footer.html" . }}
+
+  </body>
+</html>

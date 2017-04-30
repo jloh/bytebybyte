@@ -1,0 +1,33 @@
+{{ partial "head.html" . }}
+  <body>
+    <header class="navbar container grid-960 brand-header">
+{{ partial "navigation.html" . }}
+    </header>
+    <div class="divider"></div>
+    <section class="container grid-960 text-center section">
+      <h2>{{ .Title }}</h2>
+    </section>
+    <div class="divider"></div>
+    <section class="container grid-960 coumns section main">
+      <div class="issue colum col-10 col-sm-12 pt-5 mt-10 centered">
+{{ .Content }}
+                <br>
+
+        <div id='discourse-comments'></div>
+
+        <script type="text/javascript">
+          DiscourseEmbed = { discourseUrl: 'https://meta.jloh.co/',
+                             discourseEmbedUrl: {{ .Permalink }} };
+          (function() {
+            var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+            d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+          })();
+        </script>
+      </div>
+    </section>
+
+{{ partial "footer.html" . }}
+
+  </body>
+</html>

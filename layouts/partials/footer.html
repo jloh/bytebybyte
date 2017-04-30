@@ -1,55 +1,14 @@
-<section class="footer">
-    <div class="container">
-        <div class="copyright">
-
-        {{ if .Site.Params.copyright }}
-            {{ .Site.Params.copyright | markdownify}}
-        {{ end }}
-
-        </div>
-        <div class="icons">
-
-        {{ if .Site.Params.github }}
-            <a href="https://github.com/{{ .Site.Params.github }}" target="_blank">
-                <i class="fa fa-github icon" aria-hidden="false" alt="GitHub"></i>
-            </a>
-        {{ end }}
-
-        {{ if .Site.Params.twitter }}
-            <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank">
-                <i class="fa fa-twitter icon" aria-hidden="false" alt="Twitter"></i>
-            </a>
-        {{ end }}
-
-        {{ if .Site.Params.medium }}
-            <a href="https://medium.com/{{ .Site.Params.medium }}" target="_blank">
-                <i class="fa fa-medium icon" aria-hidden="false" alt="Medium"></i>
-            </a>
-        {{ end }}
-
-        {{ if .Site.Params.linkedin }}
-            <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank">
-                <img class="icon" src="/img/linkedin.svg" alt="linkedin" />
-            </a>
-        {{ end }}
-
-        {{ if .Site.Params.email }}
-            <a href="mailto:{{ .Site.Params.email }}">
-                <i class="fa fa-envelope icon" aria-hidden="false" alt="Email"></i>
-            </a>
-        {{ end }}
-
-        {{ if .Site.RSSLink }}
-            <a href="{{ .Site.RSSLink }}">
-                <i class="fa fa-rss icon" aria-hidden="false" alt="RSS"></i>
-            </a>
-        {{ end }}
-
-        </div>
-    </div>
-</section>
-
-{{ partial "footer_scripts" . }}
-
-</body>
-</html>
+    <footer class="bg-grey container footer-content">
+      <section class=" container columns grid-960 centered">
+          <section id="copyright" class="float-left column col-7">
+            <p class="hide-sm">made with ❤ by <a href="https://jloh.co">jloh</a> and powered by <a href="http://sendy.co/?ref=XR4yq">sendy</a> and <a href="https://www.netlify.com/">Netlify</a></p>
+	    <p class="show-sm">made with ❤ by <a href="https://jloh.co">jloh</a> <br> powered by <a href="http://sendy.co/?ref=XR4yq">sendy</a> and <a href="https://www.netlify.com/">Netlify</a></p>
+          </section>
+          <section id="links" class="footer-links float-right text-right column col-5">
+            <a href="#" class="github" title="GitHub"><i class="fa fa-github fa-2x"></i></a>
+            <a href="#" class="twitter" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+	    <a href="https://medium.com/{{ .Site.Params.medium.username }}" class="medium" title="Medium"><i class="fa fa-medium fa-2x"></i></a>
+	    <a href="{{ .RSSLink }}" class="rss" title="Twitter"><i class="fa fa-rss fa-2x"></i></a>
+          </section>
+      </section>
+    </footer>

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+{{ partial "head_meta.html" . }}
+    <link rel="stylesheet" href="/css/{{ index .Site.Data.css.hash "main.css" }}" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}{{ if eq $url "" }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} &middot; {{ .Title }}{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ end }}{{ end }}</title>
+
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ if .PrevInSection}}<link rel="prev" href="{{.PrevInSection.Permalink}}">{{ end}}
+    {{ if .NextInSection}}<link rel="next" href="{{.NextInSection.Permalink}}">{{ end}}
+{{- if .RSSLink }}
+    <link rel="alternate" href="{{ .RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link rel="feed" href="{{ .RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{- end }}
+
+{{ template "_internal/google_analytics.html" . }}
+  </head>

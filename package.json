@@ -1,0 +1,31 @@
+{
+  "name": "thisweekintechnology",
+  "homepage": "https://github.com/jloh/thisweekintechnology#readme",
+  "version": "0.0.1",
+  "description": "This Week in Technology website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jloh/thisweekintechnology.git"
+  },
+  "author": "James Loh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jloh/thisweekintechnology/issues"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-hash": "^4.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "less-plugin-autoprefix": "^1.5.1",
+    "spectre.css": "^0.2.14"
+  }
+}
