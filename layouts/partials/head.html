@@ -14,6 +14,7 @@
     <link rel="alternate" href="{{ .RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link rel="feed" href="{{ .RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{- end }}
-
-{{ template "_internal/google_analytics.html" . }}
+{{ if eq (getenv "HUGO_ENV") "production" }}
+  {{ template "_internal/google_analytics.html" . }}
+{{ end }}
   </head>
