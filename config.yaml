@@ -4,6 +4,7 @@ title: "This Week in Technology"
 baseURL: "https://www.thisweekin.technology/"
 enableRobotsTXT: true
 enableGitInfo: true
+googleAnalytics: 'UA-98328870-1'
 
 permalinks:
   issue: "issue/:slug/"
