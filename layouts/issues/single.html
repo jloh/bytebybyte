@@ -17,17 +17,17 @@
 <ul class="pagination">
 {{- if .PrevInSection }}
   <li class="page-item page-prev">
-    <a href="{{ .PrevInSection.Permalink }}">
-      <p class="page-item-subtitle">Previous</p>
-      <h3 class="page-item-title">{{ .PrevInSection.Title }}</h3>
+    <a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}">
+      <p class="page-item-subtitle">Previous issue</p>
+      <h4 class="page-item-title hide-md">{{ .PrevInSection.Params.shorttitle }}</h4>
     </a>
   </li>
 {{- end }}
 {{- if .NextInSection }}
   <li class="page-item page-next">
-    <a href="{{ .NextInSection.Permalink }}">
-      <p class="page-item-subtitle">Next</p>
-      <h3 class="page-item-title">{{ .NextInSection.Title }}</h3>
+    <a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}">
+      <p class="page-item-subtitle">Next issue</p>
+      <h4 class="page-item-title hide-md">{{ .NextInSection.Params.shorttitle }}</h4>
     </a>
   </li>
 {{- end }}
