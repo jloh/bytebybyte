@@ -11,11 +11,7 @@ private = true
   <p class="empty-subtitle">Our next email will be sent this Sunday <i class="fa fa-rocket" aria-hidden="true"></i></p>
   <p class="empty-subtitle">Checkout our issue tracker <i class="fa fa-check-square-o" aria-hidden="true"></i> to get involved or our past releases for more reading <i class="fa fa-book" aria-hidden="true"></i></p>
   <div class="empty-action">
-    <a href="#" title="Issue tracker">
-      <button class="btn btn-primary">Issue Tracker</button>
-    </a>
-    <a href="/issues/" title="Past issues">
-      <button class="btn btn-primary">Past Issues</button>
-    </a>
+    <a href="https://github.com/jloh/thisweekintechnology/issues" title="Issue tracker"><button class="btn btn-primary">Issue Tracker</button></a>
+    <a href="/issues/" title="Past issues"><button class="btn btn-primary">Past Issues</button></a>
   </div>
 </section>
