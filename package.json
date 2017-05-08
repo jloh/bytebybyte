@@ -25,6 +25,7 @@
     "gulp-hash": "^4.1.1",
     "gulp-less": "^3.3.0",
     "gulp-rename": "^1.2.2",
+    "gulp-template": "^4.0.0",
     "less-plugin-autoprefix": "^1.5.1",
     "spectre.css": "^0.2.14"
   }

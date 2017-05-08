@@ -3,6 +3,8 @@
   X-XSS-Protection: 1; mode=block
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
+  Link: </css/<%= maincss %>>; rel=preload; as=stylesheet
+  Link: </img/logo.jpg>; rel=preload; as=image
 
 # Cache CSS files
 # Cache these for a year - we use a hash in the filename

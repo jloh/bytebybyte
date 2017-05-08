@@ -5,6 +5,8 @@ public
 # Built CSS files and data file
 static/css
 data/css
+# /_headers is built by gulp
+static/_headers
 
 # VIM stuff
 # swap
