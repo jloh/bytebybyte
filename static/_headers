@@ -1,0 +1,13 @@
+# Basic security headers
+/*
+  X-XSS-Protection: 1; mode=block
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+
+# Cache CSS files
+/css/*
+  Cache-Control: public, max-age=360000
+
+# Cache images!
+/img/*
+  Cache-Control: public, max-age=360000
