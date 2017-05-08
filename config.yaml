@@ -27,11 +27,9 @@ params:
   progressively: false
   latestpostcount: 5
   email: "contact@thisweekin.technology"
-  social_banner: "img/banner.png"
+  social_banner: "img/logo.png"
   nav_logo: 'img/logo.png'
   posts_navigation: true
-  extracssfiles:
-   - '/css/custom.css'
   navigation:
     - title: 'Archive'
       url:   '/issues/'
