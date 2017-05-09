@@ -4,7 +4,6 @@
     {{ .Hugo.Generator }}
 {{ partial "head_meta.html" . }}
     <link rel="stylesheet" href="/css/{{ index .Site.Data.css.hash "main.css" }}" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <title>{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}{{ if eq $url "" }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} &middot; {{ .Title }}{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ end }}{{ end }}</title>
 

@@ -15,6 +15,7 @@ gulp.task("less", function() {
   return gulp.src("src/less/main.less")
     .pipe(less({outputStyle : "compressed"}))
     .pipe(autoprefixer({browsers : ["last 20 versions"]}))
+    .pipe(gulp.dest("static/css"))
     .pipe(csscomb())
     .pipe(cleancss())
     .pipe(hash())
@@ -39,10 +40,16 @@ gulp.task("headers", ['less'], function() {
     .pipe(gulp.dest('static'))
 })
 
+// Copy our fontawesome fonts into the static dir
+gulp.task("fonts", function() {
+  gulp.src('node_modules/font-awesome/fonts/fontawesome-webfont.*')
+    .pipe(gulp.dest('static/css/fonts'))
+})
+
 // Watch asset folder for changes
-gulp.task("watch", ["less"], function () {
+gulp.task("watch", ['less', 'fonts'], function () {
   gulp.watch(["src/less/*.less", "src/less/**/*.less"], ["less"])
 })
 
 // Build task
-gulp.task('default', ['less', 'headers'])
+gulp.task('default', ['less', 'fonts', 'headers'])
