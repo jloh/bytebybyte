@@ -1,5 +1,5 @@
-# This Week in Technology
+# Byte by Byte
 
-This is the [Hugo](https://gohugo.io) website behind This Week in Technology, a weekly mailing list of just 5 articles on anything in tech.
+This is the [Hugo](https://gohugo.io) website behind *Byte by Byte*, a weekly mailing list linking articles around technology from the past week.
 
-Checkout our [website](https://thisweekin.technology) if you're interested in signing up or our [contributing docs](https://thisweekin.technology/contributing/) if you'd like to submit an article.
+Checkout our [website](https://www.bytebybyte.io/) if you're interested in signing up or our or checkout our [issue tracker](https://github.com/jloh/bytebybyte/issues) to submit new articles!
