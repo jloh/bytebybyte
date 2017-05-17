@@ -1,4 +1,4 @@
-# Byte by Byte
+# Byte by Byte 🚀
 
 This is the [Hugo](https://gohugo.io) website behind *Byte by Byte*, a weekly mailing list linking articles around technology from the past week.
 
