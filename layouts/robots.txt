@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.thisweekin.technology/sitemap.xml
+Sitemap: {{ .Site.BaseURL }}/sitemap.xml
