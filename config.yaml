@@ -1,7 +1,7 @@
 ---
 languageCode: "en-AU"
-title: "This Week in Technology"
-baseURL: "https://www.thisweekin.technology/"
+title: "Byte by Byte"
+baseURL: "https://www.bytebybyte.io"
 enableRobotsTXT: true
 enableGitInfo: true
 googleAnalytics: 'UA-98328870-1'
@@ -10,8 +10,7 @@ permalinks:
   issue: "issue/:slug/"
 
 params:
-  short_title: 'This Week in Tech'
-  github: 'jloh/thisweekintechnology'
+  github: 'jloh/bytebybyte'
   twitter:
     username: "itsjloh"
   medium:
@@ -26,7 +25,7 @@ params:
   highlightjs: false
   progressively: false
   latestpostcount: 5
-  email: "contact@thisweekin.technology"
+  email: "james@bytebybyte.io"
   social_banner: "img/logo.png"
   nav_logo: 'img/logo.png'
   posts_navigation: true
