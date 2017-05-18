@@ -11,7 +11,7 @@
     <section class="container grid-960 coumns section main">
       <div class="issue colum col-10 col-sm-12 pt-5 mt-10 centered">
         <ul class="post-list">
-{{- range (first .Site.Params.latestpostcount (where .Pages "Section" "issues")).GroupByDate "January 2006" "desc" }}
+{{- range ( .Data.Pages ).GroupByDate "January 2006" "desc" }}
           <li class="groupby">{{ .Key }}</li>
 {{- range .Pages.ByPublishDate }}
 {{ partial "list.html" . }}
