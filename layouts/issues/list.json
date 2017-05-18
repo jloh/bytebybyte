@@ -1,0 +1,5 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range .Data.Pages -}}
+{{- $.Scratch.Add "index" (dict "objectID" ( printf "issue_%s" .Slug ) "issue" ( int .Slug ) "uri" .Permalink "title" .Title "blurb" ( .Params.description | plainify ) "tags" .Params.tags) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
