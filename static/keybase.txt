@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/jloh
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bytebybyte.io
+  * I am jloh (https://keybase.io/jloh) on keybase.
+  * I have a public key ASDwA4MRkdUqpj_2QvEm4GiMriZLwbxpVonrFTlR7yvrCQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120f003831191d52aa63ff642f126e0688cae264bc1bc695689eb153951ef2beb090a",
+            "host": "keybase.io",
+            "kid": "0120f003831191d52aa63ff642f126e0688cae264bc1bc695689eb153951ef2beb090a",
+            "uid": "08c559c780b1b3362f6d7375458e5219",
+            "username": "jloh"
+        },
+        "service": {
+            "hostname": "bytebybyte.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.22"
+    },
+    "ctime": 1495244290,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1495244265,
+        "hash": "44cf9d4a4b3334e72cc58dfb6a8c2baa333c83e3fb78596f97b033d9eb0f12b1dcc4dfc88f852eb33f08b9bea9bcc4bb5541be9ee51e9e5d41041494f860a415",
+        "seqno": 1096984
+    },
+    "prev": "e60fac615941a1270ea2d9b53f0a37c75d15540af8111e64f42197c6ef37797c",
+    "seqno": 48,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg8AODEZHVKqY/9kLxJuBojK4mS8G8aVaJ6xU5Ue8r6wkKp3BheWxvYWTFAvN7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZjAwMzgzMTE5MWQ1MmFhNjNmZjY0MmYxMjZlMDY4OGNhZTI2NGJjMWJjNjk1Njg5ZWIxNTM5NTFlZjJiZWIwOTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZjAwMzgzMTE5MWQ1MmFhNjNmZjY0MmYxMjZlMDY4OGNhZTI2NGJjMWJjNjk1Njg5ZWIxNTM5NTFlZjJiZWIwOTBhIiwidWlkIjoiMDhjNTU5Yzc4MGIxYjMzNjJmNmQ3Mzc1NDU4ZTUyMTkiLCJ1c2VybmFtZSI6Impsb2gifSwic2VydmljZSI6eyJob3N0bmFtZSI6ImJ5dGVieWJ5dGUuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMiJ9LCJjdGltZSI6MTQ5NTI0NDI5MCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDk1MjQ0MjY1LCJoYXNoIjoiNDRjZjlkNGE0YjMzMzRlNzJjYzU4ZGZiNmE4YzJiYWEzMzNjODNlM2ZiNzg1OTZmOTdiMDMzZDllYjBmMTJiMWRjYzRkZmM4OGY4NTJlYjMzZjA4YjliZWE5YmNjNGJiNTU0MWJlOWVlNTFlOWU1ZDQxMDQxNDk0Zjg2MGE0MTUiLCJzZXFubyI6MTA5Njk4NH0sInByZXYiOiJlNjBmYWM2MTU5NDFhMTI3MGVhMmQ5YjUzZjBhMzdjNzVkMTU1NDBhZjgxMTFlNjRmNDIxOTdjNmVmMzc3OTdjIiwic2Vxbm8iOjQ4LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQJPM7aOjOBtLjZrbJRGHu410gV6Xzt7WhNyzK03SuHaJ/ffhj1LYqCXyeTs701YStek/u44Ol+A6AP4lvoIwjg6oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCRqvLSiVtpLeMedLv7HoyzLaUf7wxPgNCRy5QRoWfKbqN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jloh
+
+==================================================================
