@@ -10,6 +10,8 @@ permalinks:
   issue: "issue/:slug/"
 
 params:
+  author: 'James Loh'
+  AuthorName: 'James Loh'
   github: 'jloh/bytebybyte'
   twitter:
     username: "itsjloh"
@@ -26,7 +28,7 @@ params:
   progressively: false
   latestpostcount: 5
   email: "james@bytebybyte.io"
-  social_banner: "img/logo.png"
+  meta_img: "img/logo.png"
   nav_logo: 'img/logo.png'
   posts_navigation: true
   navigation:

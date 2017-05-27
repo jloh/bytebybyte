@@ -1,0 +1,40 @@
+   <script type="application/ld+json">
+<!-- Generate our vars -->
+{{- if .IsHome -}}
+  {{- $.Scratch.Set "schematype" "website" -}}
+{{- else -}}
+  {{- $.Scratch.Set "schematype" "Article" -}}
+{{- end -}}
+
+{{- $.Scratch.SetInMap "schema" "@context" "https://schema.org" -}}
+
+<!-- Post type //-->
+{{- $.Scratch.SetInMap "schema" "@type" ( $.Scratch.Get "schematype" ) -}}
+
+<!-- Page Details //-->
+{{- $.Scratch.SetInMap "schema" "url" .Permalink -}}
+{{- $.Scratch.SetInMap "schema" "mainEntityOfPage" ( dict "@type" "WebPage" "@id" .Site.BaseURL ) -}}
+
+<!-- Publisher Details //-->
+{{- $.Scratch.SetInMap "schema" "publisher" ( dict "@type" "Organization" "name" .Site.Title "logo" ( .Site.Params.logofile | absURL ) ) -}}
+
+{{- if .IsPage -}}
+  <!-- Post Author //-->
+  {{- $.Scratch.SetInMap "schema" "author" ( dict "@type" "Person" "name" "James Loh" "sameAs" ( slice "https://jloh.co" "https://twitter.com/itsjloh" ) "description" "Sysadmin for a web solutions company deploying cloud solutions across the globe" "image" "https://jloh.co/assets/img/profile.jpg" "url" "https://jloh.co/author/james/" ) -}}
+
+  <!-- Post details //-->
+  <!-- TODO: Look at unescaping this?? //-->
+  {{- $.Scratch.SetInMap "schema" "headline" .Title -}}
+  {{- $.Scratch.SetInMap "schema" "datePublished" ( .Date.Format "2006-01-02T15:04:05-07:00" ) -}}
+  {{- if ne .Lastmod .Date -}}
+    {{- $.Scratch.SetInMap "schema" "dateModified" ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) -}}
+  {{- end -}}
+  {{- with .Params.tags -}}
+    {{- $.Scratch.SetInMap "schema" "keywords" (delimit . ", " ) -}}
+  {{-  end -}}
+{{- end -}}
+{{- $.Scratch.SetInMap "schema" "description" ( $.Param "Description" ) -}}
+
+<!-- Generate schema //-->
+{{- $.Scratch.Get "schema" | jsonify -}}
+</script>
