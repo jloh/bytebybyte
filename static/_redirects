@@ -1,1 +1,1 @@
-/.well-known/acme-challenge/* https://sendy.jloh.pub/:splat
+/.well-known/acme-challenge/* https://sendy.jloh.pub/.well-known/acme-challenge/:splat
