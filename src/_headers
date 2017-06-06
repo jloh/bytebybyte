@@ -14,5 +14,3 @@
 # Cache images!
 /img/*
   Cache-Control: public, max-age=604800
-
-/.well-known/acme-challenge/* https://ca.jloh.co/:splat
