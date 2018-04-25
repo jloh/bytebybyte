@@ -13,7 +13,7 @@
         <ul class="post-list">
 {{- range ( .Data.Pages ).GroupByDate "January 2006" "desc" }}
           <li class="groupby">{{ .Key }}</li>
-{{- range .Pages.ByPublishDate }}
+{{- range .Pages.ByDate.Reverse}}
 {{ partial "list.html" . }}
 {{- end }}
 {{- end }}
