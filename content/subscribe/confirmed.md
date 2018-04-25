@@ -1,6 +1,9 @@
 +++
 title = "Subscription confirmed"
 private = true
+aliases = [
+  "/email-confirmed/"
+]
 
 +++
 <section class="empty" style="background: inherit">
