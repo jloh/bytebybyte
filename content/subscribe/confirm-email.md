@@ -1,6 +1,9 @@
 +++
 title = "Confirm your email"
 private = true
+aliases = [
+  "/confirm-email/"
+]
 
 +++
 

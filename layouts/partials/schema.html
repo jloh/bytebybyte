@@ -16,7 +16,12 @@
 {{- $.Scratch.SetInMap "schema" "mainEntityOfPage" ( dict "@type" "WebPage" "@id" .Site.BaseURL ) -}}
 
 <!-- Publisher Details //-->
-{{- $.Scratch.SetInMap "schema" "publisher" ( dict "@type" "Organization" "name" .Site.Title "logo" ( .Site.Params.logofile | absURL ) ) -}}
+<!-- Get logo image properties //-->
+{{- with (imageConfig ( printf "static/%s" .Site.Params.logofile )) -}}
+  {{- $.Scratch.Add "logowidth"  ( int .Width  ) -}}
+  {{- $.Scratch.Add "logoheight" ( int .Height ) -}}
+{{- end -}}
+{{- $.Scratch.SetInMap "schema" "publisher" ( dict "@type" "Organization" "name" .Site.Title "logo" ( dict "@type" "imageObject" "url" ( .Site.Params.logofile | absURL ) "height" ( $.Scratch.Get "logoheight" ) "width" ( $.Scratch.Get "logowidth" ) ) ) -}}
 
 {{- if .IsPage -}}
   <!-- Post Author //-->

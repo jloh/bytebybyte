@@ -6,7 +6,7 @@
     <div class="divider"></div>
     <section class="container grid-960 text-center section">
       <h2>{{ .Title }}</h2>
-      <p class="text-uppercase tagline">Published {{ .Date.Format .Site.Params.dateform }}</p>
+      <p class="text-uppercase tagline">Published {{ .Date.Format .Site.Params.dateform }}<span class="hide-xs"> &middot; <a href="https://github.com/{{ .Site.Params.github }}/tree/master/content/{{ .File.Path }}" title="">Edit on GitHub</a></span></p>
     </section>
     <div class="divider"></div>
     <section class="container grid-960 coumns section main">
@@ -32,20 +32,6 @@
   </li>
 {{- end }}
 </ul>
-
-            <div class="divider"></div>
-
-            <div id='discourse-comments'></div>
-
-            <script type="text/javascript">
-              DiscourseEmbed = { discourseUrl: 'https://meta.jloh.co/',
-                                 discourseEmbedUrl: {{ .Permalink }} };
-              (function() {
-                var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-                d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-              })();
-            </script>
         </div>
 
     </section>

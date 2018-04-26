@@ -5,9 +5,28 @@ baseURL: "https://www.bytebybyte.io"
 enableRobotsTXT: true
 enableGitInfo: true
 googleAnalytics: 'UA-98328870-1'
+disableAliases: true
 
 permalinks:
   issue: "issue/:slug/"
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "REDIR"
+
+mediaTypes:
+  text/netlify:
+    suffix: ""
+    delimiter: ""
+
+outputFormats:
+  REDIR:
+    mediatype: "text/netlify"
+    baseName: "_redirects"
+    isPlainText: true
+    notAlternative: true
 
 params:
   author: 'James Loh'
