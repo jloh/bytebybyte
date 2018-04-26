@@ -4,3 +4,8 @@
 {{  . | printf "%-35s" }}	{{ $p.RelPermalink -}}
 {{ end -}}
 {{- end -}}
+# Redirect domain aliases to primary domain
+https://www.thisweekin.technology/* https://www.bytebybyte.io/:splat 301!
+http://www.thisweekin.technology/* https://www.bytebybyte.io/:splat 301!
+https://thisweekin.technology/* https://www.bytebybyte.io/:splat 301!
+http://thisweekin.technology/* https://www.bytebybyte.io/:splat 301!
